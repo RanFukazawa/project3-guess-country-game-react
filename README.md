@@ -139,7 +139,7 @@ Ran Fukazawa
 This project was created as part of [CS5610 Project 3](https://northeastern.instructure.com/courses/225993/assignments/2901102) coursework.
 
 ## Video Demonstration
-[Link to video](https://youtu.be/zweU2uy4QmQ)
+[Link to video](https://youtu.be/EJcf8JZo6T0)
 
 ## Generative AI Usage
 This project used **Claude.ai Sonnet4.5** (by Anthropic) for assistance in the following areas:  

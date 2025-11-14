@@ -150,7 +150,7 @@ export default function MyMongoDB() {
     const correctCountry = countries[0];
 
     // Extract all 4 countries for options
-    const options = countries.map((country) => country);
+    const options = countries.map((country) => country.name);
 
     // Shuffle the options so correct answer is not always the first one
     const shuffledOptions = shuffleArray(options);
@@ -187,6 +187,11 @@ export default function MyMongoDB() {
 
     if (!country) {
       throw new Error("Country not found");
+    }
+
+    if (!userAnswer || typeof userAnswer !== "string") {
+      console.error("Invalid userAnswer:", userAnswer);
+      throw new Error("Invalid answer format");
     }
 
     const correctAnswer = country.name.trim();

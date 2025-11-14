@@ -9,7 +9,7 @@ export default function App() {
       <div className="App">
         {/* Navigation Bar */}
         <nav className="navbar">
-          <h1>🌎 Guess the Country</h1>
+          <h1>🌎 Guess Country Game</h1>
           <div className="nav-links">
             <Link to="/">Home</Link>
             <Link to="/game">Play Game</Link>

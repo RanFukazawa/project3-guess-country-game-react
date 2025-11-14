@@ -1,7 +1,7 @@
 // Single country information
 import Button from "react-bootstrap/Button";
 import ListGroup from "react-bootstrap/ListGroup";
-import "/src/index.css";
+import "../../styles/index.css";
 
 export default function CountryItem({ country, onEdit, onDelete }) {
   return (

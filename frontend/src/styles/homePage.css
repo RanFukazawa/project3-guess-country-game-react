@@ -1,0 +1,67 @@
+.home-page {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 80vh;
+  padding: 2rem;
+  gap: 4rem;
+}
+
+.home-container {
+  text-align: center;
+  max-width: 600px;
+  padding: 3rem;
+}
+
+.home-container h1 {
+  font-size: 3rem;
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  font-size: 1.3rem;
+  color: #7f8c8d;
+  margin-bottom: 2rem;
+}
+
+.game-info {
+  background-color: #ecf0f1;
+  padding: 2em;
+  border-radius: 15px;
+  margin-bottom: 2rem;
+}
+
+.game-info h2 {
+  color: #34495e;
+  margin-bottom: 1rem;
+}
+
+.game-info ul {
+  list-style: none;
+  padding: 0;
+}
+
+.game-info li {
+  font-size: 1.1rem;
+  margin: 1rem 0;
+  color: #2c3e50;
+}
+
+.start-button {
+  padding: 1.5rem 3rem;
+  font-size: 1.5rem;
+  background-color: #27ae60;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s;
+  box-shadow: 0 4px 15px rgba(39, 174, 96, 0.3);
+}
+
+.start-button:hover {
+  background-color: #229954;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(39, 174, 96, 0.4);
+}

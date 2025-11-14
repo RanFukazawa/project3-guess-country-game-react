@@ -1,4 +1,4 @@
-import CountryItem from "./CountryItem.jsx"
+import CountryItem from "./CountryItem.jsx";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 

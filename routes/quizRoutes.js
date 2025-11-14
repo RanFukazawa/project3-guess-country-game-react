@@ -22,6 +22,11 @@ router.post("/check-answer", async (req, res) => {
   try {
     const { countryId, userAnswer } = req.body;
 
+    console.log("📥 Received check-answer request:");
+    console.log("  countryId:", countryId);
+    console.log("  userAnswer:", userAnswer);
+    console.log("  userAnswer type:", typeof userAnswer);
+
     if (!countryId || !userAnswer) {
       return res
         .status(404)

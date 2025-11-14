@@ -7,8 +7,8 @@ import Col from "react-bootstrap/Col";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 
-import CountryList from "../components/Admin/CountryList.jsx";
-import CountryForm from "../components/Admin/CountryForm.jsx";
+import CountryList from "../components/admin/CountryList.jsx";
+import CountryForm from "../components/admin/CountryForm.jsx";
 
 export default function AdminPage() {
   const [countries, setCountries] = useState([]);

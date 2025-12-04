@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 
 import { Button, Col, Form, Row, Card } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "../../styles/index.css";
 
 export default function CountryForm({ onSubmit, editingCountry = null, onCancel, resetForm }) {
   const [formData, setFormData] = useState({
@@ -95,8 +96,13 @@ export default function CountryForm({ onSubmit, editingCountry = null, onCancel,
       <Card.Body>
         <Form onSubmit={handleSubmit}>
         <h3>{editingCountry ? "Edit Country" : "Add New Country"}</h3>
+
+        <p><span className="text-danger">*</span> = required</p>
+
         <Form.Group as={Row} className="mb-3" controlId="name">
-          <Form.Label column sm={4}>Country:</Form.Label>
+          <Form.Label column sm={4} className="col-form-label required-field">
+            Country:
+          </Form.Label>
           <Col sm={8}>
             <Form.Control
               type="text"
@@ -116,7 +122,6 @@ export default function CountryForm({ onSubmit, editingCountry = null, onCancel,
               placeholder="Capitals  (comma-separated)"
               value={formData.capitals}
               onChange={handleChange}
-              required
             />
           </Col>
         </Form.Group>
@@ -129,13 +134,14 @@ export default function CountryForm({ onSubmit, editingCountry = null, onCancel,
               placeholder="Population"
               value={formData.population}
               onChange={handleChange}
-              required
             />
           </Col>
         </Form.Group>
 
         <Form.Group as={Row} className="mb-3" controlId="region">
-          <Form.Label column sm={4}>Region:</Form.Label>
+          <Form.Label column sm={4} className="col-form-label required-field">
+            Region:
+          </Form.Label>
           <Col sm={8}>
             <Form.Select 
               value={formData.region}
@@ -161,13 +167,14 @@ export default function CountryForm({ onSubmit, editingCountry = null, onCancel,
               placeholder="Languages (comma-separated)"
               value={formData.languages}
               onChange={handleChange}
-              required
             />
           </Col>
         </Form.Group>
 
         <Form.Group as={Row} className="mb-3" controlId="countryCode">
-          <Form.Label column sm={4}>Country Code:</Form.Label>
+          <Form.Label column sm={4} className="col-form-label required-field">
+            Country Code:
+          </Form.Label>
           <Col sm={8}>
             <Form.Control
               type="text"

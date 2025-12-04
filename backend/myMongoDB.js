@@ -3,6 +3,8 @@ import { MongoClient, ObjectId } from "mongodb";
 const uri = process.env.MONGODB_URI;
 const dbName = "guessCountryGame";
 
+// Working on userTest_1
+
 let client;
 let db;
 
@@ -28,7 +30,7 @@ export default function MyMongoDB() {
 
   me.getAllCountries = async ({
     query = {},
-    collection = "adminCountries", // Default to admin-created data
+    collection = "adminCountries_userTest_1", // Default to admin-created data
   }) => {
     const { db } = await connect();
     const countriesCollection = db.collection(collection);
@@ -40,22 +42,20 @@ export default function MyMongoDB() {
 
   me.getAdminCountryById = async (countryId) => {
     const { db } = await connect();
-    const countries = db.collection("adminCountries");
+    const countries = db.collection("adminCountries_userTest_1");
     const mongoID = ObjectId.createFromHexString(countryId);
     return await countries.findOne({ _id: mongoID });
   };
 
   me.addCountry = async (formData) => {
     const { db } = await connect();
-    const countries = db.collection("adminCountries");
+    const countries = db.collection("adminCountries_userTest_1");
 
+    // Required fields
     const document = {
       // countryId: formData.countryId,
       name: formData.name,
-      capitals: formData.capitals,
-      population: parseInt(formData.population),
       region: formData.region,
-      languages: formData.languages,
       countryCode: formData.countryCode?.toLowerCase(),
       flagUrl:
         formData.flagUrl ||
@@ -63,25 +63,54 @@ export default function MyMongoDB() {
       createdAt: new Date(),
     };
 
+    // Only add optional fields if they have values
+    if (formData.capitals && formData.capitals.length > 0) {
+      document.capitals = formData.capitals;
+    }
+
+    if (formData.population && !isNaN(parseInt(formData.population))) {
+      document.population = parseInt(formData.population);
+    }
+
+    if (formData.languages && formData.languages.length > 0) {
+      document.languages = formData.languages;
+    }
+
     return await countries.insertOne(document);
   };
 
   me.updateCountry = async (countryId, updateData) => {
     const { db } = await connect();
-    const countries = db.collection("adminCountries");
+    const countries = db.collection("adminCountries_userTest_1");
 
     const allowedUpdates = {};
-    for (const key of [
-      "name",
-      "capitals",
-      "population",
-      "region",
-      "languages",
-      "countryCode",
-      "flagUrl",
-    ]) {
-      if (updateData[key] !== undefined) allowedUpdates[key] = updateData[key];
+
+    // Required fields - always update if provided
+    if (updateData.name !== undefined) allowedUpdates.name = updateData.name;
+    if (updateData.region !== undefined)
+      allowedUpdates.region = updateData.region;
+    if (updateData.countryCode !== undefined) {
+      allowedUpdates.countryCode = updateData.countryCode;
     }
+    if (updateData.flagUrl !== undefined)
+      allowedUpdates.flagUrl = updateData.flagUrl;
+
+    // Optional fields - only include if they have values
+    if (updateData.capitals && updateData.capitals.length > 0) {
+      allowedUpdates.capitals = updateData.capitals;
+    }
+
+    if (updateData.population) {
+      const parsed = parseInt(updateData.population);
+      if (!isNaN(parsed)) {
+        allowedUpdates.population = parsed;
+      }
+    }
+
+    if (updateData.languages && updateData.languages.length > 0) {
+      allowedUpdates.languages = updateData.languages;
+    }
+
     allowedUpdates.updatedAt = new Date();
 
     const mongoID = ObjectId.createFromHexString(countryId);
@@ -93,7 +122,7 @@ export default function MyMongoDB() {
 
   me.deleteCountry = async (countryId) => {
     const { db } = await connect();
-    const countries = db.collection("adminCountries");
+    const countries = db.collection("adminCountries_userTest_1");
 
     const mongoID = ObjectId.createFromHexString(countryId);
     return await countries.deleteOne({ _id: mongoID });
@@ -102,7 +131,7 @@ export default function MyMongoDB() {
   // Functions for guessing country name game
   me.getRandomCountry = async () => {
     const { db } = await connect();
-    const collection = db.collection("adminCountries");
+    const collection = db.collection("adminCountries_userTest_1");
 
     // Get 4 random countries
     const countries = await collection
@@ -149,7 +178,7 @@ export default function MyMongoDB() {
   // Check the answer
   me.checkAnswer = async (countryId, userAnswer) => {
     const { db } = await connect();
-    const countries = db.collection("adminCountries");
+    const countries = db.collection("adminCountries_userTest_1");
     const mongoID = ObjectId.createFromHexString(countryId);
 
     const country = await countries.findOne({ _id: mongoID });

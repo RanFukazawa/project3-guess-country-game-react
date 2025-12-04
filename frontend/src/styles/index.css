@@ -35,6 +35,12 @@
   gap: 8px;
 }
 
+.required-field::after {
+  content: " *";
+  color: red;
+  margin-left: 2px;
+}
+
 /* Navigation bar */
 .App {
   min-height: 100vh;

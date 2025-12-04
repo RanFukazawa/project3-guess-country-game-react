@@ -1,7 +1,7 @@
 // Add/edit country form
 import { useState, useEffect } from "react";
 
-import { Button, Col, Form, Row, Card } from "react-bootstrap";
+import { Button, Col, Form, Row, Card, OverlayTrigger, Popover } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../../styles/index.css";
 
@@ -91,8 +91,25 @@ export default function CountryForm({ onSubmit, editingCountry = null, onCancel,
     onSubmit(dataToSubmit);
   };
 
+  const countryCodePopover = (
+  <Popover id="country-code-popover">
+    <Popover.Header as="h3">Country Code Reference</Popover.Header>
+    <Popover.Body>
+      Check the{' '}
+      <a 
+        href="https://en.wikipedia.org/wiki/List_of_ISO_3166_country_codes"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        ISO 3166 Country Code
+      </a>
+      {' '}list for the correct 2-letter code.
+    </Popover.Body>
+  </Popover>
+);
+
   return (
-    <Card style={{width: "25rem"}}>
+    <Card style={{width: "28rem"}}>
       <Card.Body>
         <Form onSubmit={handleSubmit}>
         <h3>{editingCountry ? "Edit Country" : "Add New Country"}</h3>
@@ -172,8 +189,23 @@ export default function CountryForm({ onSubmit, editingCountry = null, onCancel,
         </Form.Group>
 
         <Form.Group as={Row} className="mb-3" controlId="countryCode">
-          <Form.Label column sm={4} className="col-form-label required-field">
-            Country Code:
+          <Form.Label column sm={4}>
+            Country Code: <span className="text-danger">*</span>
+            {' '}
+            <OverlayTrigger
+              trigger="click"
+              placement="right"
+              overlay={countryCodePopover}
+              rootClose
+            >
+              <Button 
+                variant="link" 
+                size="sm" 
+                style={{ padding: 0, verticalAlign: 'baseline', fontSize: '1rem' }}
+              >
+                ℹ️
+              </Button>
+            </OverlayTrigger>
           </Form.Label>
           <Col sm={8}>
             <Form.Control

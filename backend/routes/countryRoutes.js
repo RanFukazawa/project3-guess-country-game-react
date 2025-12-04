@@ -62,7 +62,7 @@ router.post("/", async (req, res) => {
       flagUrl,
     } = req.body;
 
-    if (!name || !capitals || !population || !region || !languages) {
+    if (!name || !region || !countryCode) {
       return res.status(400).json({ message: "All fields are required" });
     }
 
@@ -84,6 +84,19 @@ router.post("/", async (req, res) => {
       flagUrl: flagUrl?.trim(),
       isPublic: false,
     };
+
+    // Only add optional fields if they have values
+    if (capitals && capitals.length > 0) {
+      countryData.capitals = capitals.map((i) => i.trim()).filter(Boolean);
+    }
+
+    if (population) {
+      countryData.population = parseInt(population);
+    }
+
+    if (languages && languages.length > 0) {
+      countryData.languages = languages.map((i) => i.trim()).filter(Boolean);
+    }
 
     const result = await myDB.addCountry(countryData);
 

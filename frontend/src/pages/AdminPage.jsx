@@ -96,9 +96,17 @@ export default function AdminPage() {
       }
 
       await fetchCountries(); // Refresh list
-      setEditingCountry(null); // Clear editing state
-      setShowEditModal(false);
-      setResetForm(prev => prev + 1); // Increment to trigger reset
+
+      if (editingCountry) {
+        // For editing, close modal
+        setEditingCountry(null); // Clear editing state
+        setShowEditModal(false);
+      } else {
+        // For adding, reset form
+        setEditingCountry(null);
+        setResetForm(prev => prev + 1); // Increment to trigger reset
+      }
+        
       alert(editingCountry ? "Country updated!" : "Country added!");
     } catch (err) {
       console.error("❌ Error:", err);

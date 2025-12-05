@@ -2,10 +2,7 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext.jsx";
-import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
-import Button from "react-bootstrap/Button";
+import { Container, Row, Col, Button, Modal } from "react-bootstrap";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 
@@ -18,6 +15,7 @@ export default function AdminPage() {
   const [loading, setLoading] = useState(true);
   const [editingCountry, setEditingCountry] = useState(null);
   const [resetForm, setResetForm] = useState(0);
+  const [showEditModal, setShowEditModal] = useState(false);
 
   const { user, logout } = useAuth();
   const navigate = useNavigate();
@@ -47,6 +45,7 @@ export default function AdminPage() {
   const handleEdit = async (country) => {
     console.log("✏️ Editing country data:", country);
     setEditingCountry(country);
+    setShowEditModal(true);
   }
 
   const handleDelete = async (countryId) => {
@@ -98,6 +97,7 @@ export default function AdminPage() {
 
       await fetchCountries(); // Refresh list
       setEditingCountry(null); // Clear editing state
+      setShowEditModal(false);
       setResetForm(prev => prev + 1); // Increment to trigger reset
       alert(editingCountry ? "Country updated!" : "Country added!");
     } catch (err) {
@@ -108,6 +108,7 @@ export default function AdminPage() {
 
   const handleCancelEdit = () => {
     setEditingCountry(null);
+    setShowEditModal(false);
   };
 
   const handleLogout = async () => {
@@ -116,6 +117,9 @@ export default function AdminPage() {
       navigate("/login");
     }
   };
+
+  if (loading) return <Container><p>Loading countries...</p></Container>;
+  if (error) return <Container><p>Error: {error}</p></Container>;
 
   if (loading) return <Container><p>Loading countries...</p></Container>;
   if (error) return <Container><p>Error: {error}</p></Container>;
@@ -132,21 +136,43 @@ export default function AdminPage() {
             </Button>
           </div>
         </div>
+        
         <Row>
           <Col md={8} xs={12}>
             <CountryList 
               countries={countries} 
               onEdit={handleEdit} 
-              onDelete={handleDelete} />
+              onDelete={handleDelete} 
+            />
           </Col>
+          
           <Col md={4} xs={12}>
+            {/* Add form - always visible in the column */}
             <CountryForm 
               onSubmit={handleSubmit} 
-              editingCountry={editingCountry} 
+              editingCountry={null}  // ← Always null for add form
               onCancel={handleCancelEdit}
-              resetForm={resetForm} />
+              resetForm={resetForm} 
+            />
           </Col>
         </Row>
+
+        {/* Edit Modal - only shows when editing */}
+        <Modal 
+          show={showEditModal} 
+          onHide={handleCancelEdit}
+          size="undefined"
+          centered
+        >
+          <Modal.Body>
+            <CountryForm 
+              onSubmit={handleSubmit} 
+              editingCountry={editingCountry}
+              onCancel={handleCancelEdit}
+              resetForm={resetForm} 
+            />
+          </Modal.Body>
+        </Modal>
       </div>  
     </Container>
   )

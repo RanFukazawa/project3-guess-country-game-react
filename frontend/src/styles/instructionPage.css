@@ -1,0 +1,130 @@
+/* instructionPage.css */
+.instruction-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #66a8ea 0%, #4b6fa2 100%);
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.instruction-container {
+  background: white;
+  border-radius: 20px;
+  padding: 3rem;
+  max-width: 700px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+.instruction-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.instruction-icon {
+  font-size: 4rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.instruction-header h1 {
+  font-size: 2.5rem;
+  color: #333;
+  margin: 0;
+}
+
+.instruction-content {
+  margin-bottom: 2rem;
+}
+
+.how-to-play h2,
+.tips-section h2 {
+  color: #667eea;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.instruction-steps,
+.tips-list {
+  padding-left: 1.5rem;
+  line-height: 1.8;
+}
+
+.instruction-steps li,
+.tips-list li {
+  margin-bottom: 0.8rem;
+  color: #555;
+  font-size: 1.05rem;
+}
+
+.tips-section {
+  margin: 2rem 0;
+  padding: 1.5rem;
+  background: #f8f9ff;
+  border-radius: 12px;
+}
+
+.scoring-info {
+  background: linear-gradient(135deg, #667eea15 0%, #764ba215 100%);
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin-top: 2rem;
+}
+
+.scoring-info h3 {
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.scoring-info p {
+  margin: 0.5rem 0;
+  color: #555;
+  font-size: 0.95rem;
+}
+
+.button-group {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.back-button,
+.start-game-button {
+  flex: 1;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.back-button {
+  background: #e0e0e0;
+  color: #333;
+}
+
+.back-button:hover {
+  background: #d0d0d0;
+}
+
+.start-game-button {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.start-game-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 16px rgba(102, 126, 234, 0.4);
+}
+
+@media (max-width: 768px) {
+  .instruction-container {
+    padding: 2rem;
+  }
+  
+  .button-group {
+    flex-direction: column;
+  }
+}

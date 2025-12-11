@@ -6,7 +6,7 @@ import MyMongoDB from "../myMongoDB.js";
 const router = express.Router();
 const myDB = MyMongoDB();
 
-// GET random country for the game
+// GET random country names for the game
 router.get("/random", async (req, res) => {
   try {
     const country = await myDB.getRandomCountry();
@@ -14,6 +14,18 @@ router.get("/random", async (req, res) => {
   } catch (err) {
     console.error("Error getting random country:", err);
     res.status(500).json({ message: "Failed to get random country" });
+  }
+});
+
+// GET random country flags
+router.get("/random-with-flags", async (req, res) => {
+  try {
+    const myDB = MyMongoDB();
+    const countryData = await myDB.getRandomCountryWithFlags();
+    res.json(countryData);
+  } catch (err) {
+    console.error("Error getting random country with flags:", err);
+    res.status(500).json({ error: err.message });
   }
 });
 

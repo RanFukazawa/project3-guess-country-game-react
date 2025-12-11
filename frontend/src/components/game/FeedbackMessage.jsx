@@ -1,16 +1,15 @@
-// Correct/incorrect feedback message
-export default function FeedbackMessage({ show, isCorrect, correctAnswer }) {
-  if (!show) {
-    return null;
-  }
+export default function FeedbackMessage({ show, isCorrect, correctAnswer, isSecondChance }) {
+  if (!show) return null;
 
   return (
     <div className={`feedback-message ${isCorrect ? "correct" : "incorrect"}`}>
       {isCorrect ? (
-        <p>✅ Correct!</p>
+        <p>✅ Correct! {correctAnswer}</p>
+      ) : isSecondChance ? (
+        <p>❌ Wrong! Try one more time!</p>
       ) : (
-        <p>Incorrect! The answer is {correctAnswer}</p>
+        <p>❌ Incorrect! The answer was {correctAnswer}</p>
       )}
     </div>
-  )
+  );
 }

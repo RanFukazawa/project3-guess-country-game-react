@@ -1,164 +1,98 @@
-// Main game container
 import "../../styles/game.css";
-
 import { useState, useEffect } from "react";
-import { checkAnswer, getRandomCountry } from "../../services/api";
-import QuestionDisplay from "./QuestionDisplay.jsx";
-import AnswerOptions from "./AnswerOptions.jsx";
-import ScoreDisplay from "./ScoreDisplay.jsx";
-import FeedbackMessage from "./FeedbackMessage.jsx";
+import { useNavigate } from "react-router-dom"; 
+import ModeSelector from "./ModeSelector.jsx";
+import FlagToCountry from "./modes/FlagToCountry.jsx";
+import CountryToFlag from "./modes/CountryToFlag.jsx";
 import ResultsScreen from "./ResultsScreen.jsx";
 
-export default function QuizGame() {
-  // Game state
-  const [currentCountry, setCurrentCountry] = useState(null);
+export default function QuizGame({ initialMode }) {
+  const navigate = useNavigate();
+  
+  const [gameMode, setGameMode] = useState(initialMode || null);
   const [questionNumber, setQuestionNumber] = useState(1);
   const [score, setScore] = useState(0);
-  const [gameStatus, setGameStatus] = useState("playing");
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
-  // const [record, setRecord] = useState([])
-
-  // Feedback state
-  const [showFeedback, setShowFeedback] = useState(false);
-  const [isCorrect, setIsCorrect] = useState(false);
-  const [correctAnswer, setCorrectAnswer] = useState("");
-  const [answersDisabled, setAnswersDisabled] = useState(false);
+  const [gameStatus, setGameStatus] = useState(initialMode ? "playing" : "selecting");
+  const [record, setRecord] = useState([]);
 
   const TOTAL_QUESTIONS = 10;
 
   useEffect(() => {
-    fetchQuestion(); 
-  }, []);
-
-  const fetchQuestion = async () => {
-    try {
-      setLoading(true);
-      setError(null);
-      const country = await getRandomCountry();
-      setCurrentCountry(country);
-      setLoading(false);
-    } catch (err) {
-      console.error("Error fetching questions:", err);
-      setError("Failed to load questions. Please try again.");
-      setLoading(false);
+    if (initialMode) {
+      startGame(initialMode);
     }
-  };
+  }, [initialMode]);
 
-  const handleAnswerSelect = async (selectedAnswer) => {
-    // Prevent multiple clicks
-    if (answersDisabled) return; 
-
-    setAnswersDisabled(true);
-
-    try {
-      // Check answer with backend
-      const result = await checkAnswer(currentCountry._id, selectedAnswer);
-
-      // Update feedback state
-      setIsCorrect(result.correct);
-      setCorrectAnswer(result.correctAnswer);
-      setShowFeedback(true);
-
-      // Update score if correct
-      if (result.correct) {
-        setScore(score + 1);
-      }
-
-      // const userRecord = (newRecord) => {
-      //   setRecord(prevRecord => [...prevRecord, newRecord])
-      // }
-
-      const delay = result.correct ? 1300 : 2000;
-
-      // Wait 1.3 seconds for correct answer and
-      // 2 seconds for incorrect answer and 
-      // move to the next question or end the game
-      setTimeout(() => {
-        setShowFeedback(false);
-        setAnswersDisabled(false);
-
-        if (questionNumber >= TOTAL_QUESTIONS) {
-          // Game finished
-          setGameStatus("finished");
-        } else {
-          // Next questions
-          setQuestionNumber(questionNumber + 1);
-          fetchQuestion();
-        }
-      }, delay);
-    } catch (err) {
-      console.error("Error checking answer:", err);
-      setError("Failed to check answer. Please try again.");
-      setAnswersDisabled(false);
-    }
-  };
-
-  // Reset game to play again
-  const handlePlayAgain = () => {
+  const startGame = (mode) => {
+    setGameMode(mode);
+    setGameStatus("playing");
     setQuestionNumber(1);
     setScore(0);
-    setGameStatus("playing");
-    setShowFeedback(false);
-    setIsCorrect(false);
-    setCorrectAnswer("");
-    setAnswersDisabled(false);
-    // setRecord([]);
-    fetchQuestion();
+    setRecord([]);
   };
 
-  if (loading && questionNumber === 1) {
-    return (
-      <div className="quiz-game">
-        <p>Loading game...</p>
-      </div>
-    );
+  const handleCorrectAnswer = (points = 1) => {
+    setScore(score + points);
+  };
+
+  const addRecord = (recordItem) => {
+    setRecord(prevRecord => [...prevRecord, recordItem]);
+  };
+
+  const nextQuestion = () => {
+    if (questionNumber >= TOTAL_QUESTIONS) {
+      setGameStatus("finished");
+    } else {
+      setQuestionNumber(questionNumber + 1);
+    }
+  };
+
+  const handlePlayAgain = () => {
+    // Keep same mode, restart game
+    setQuestionNumber(1);
+    setScore(0);
+    setRecord([]);
+    setGameStatus("playing");
+  };
+
+  const handleBackToHome = () => {
+    navigate("/"); // Navigate to home page
+  };
+
+  // Mode selection screen
+  if (gameStatus === "selecting") {
+    return <ModeSelector onSelectMode={startGame} />;
   }
 
-  // Error state
-  if (error) {
-    return (
-      <div className="quiz-game">
-        <p className="error">{error}</p>
-          <button onClick={fetchQuestion}>Try Again</button>
-      </div>
-    )
-  }
-
-  // Game ended - show results
+  // Results screen
   if (gameStatus === "finished") {
     return (
       <ResultsScreen
         score={score}
         totalQuestions={TOTAL_QUESTIONS}
         onPlayAgain={handlePlayAgain}
-        // userRecord={record}
+        onBackToHome={handleBackToHome}
+        userRecord={record}
+        gameMode={gameMode}
       />
     );
   }
 
-  // Play game - show question
+  // Shared props for game modes
+  const sharedProps = {
+    questionNumber,
+    totalQuestions: TOTAL_QUESTIONS,
+    score,
+    onCorrectAnswer: handleCorrectAnswer,
+    onNextQuestion: nextQuestion,
+    onAddRecord: addRecord,
+  };
+
+  // Play game - render mode component
   return (
     <div className="quiz-game">
-      <ScoreDisplay correct={score} totalQuestions={TOTAL_QUESTIONS} />
-
-      <QuestionDisplay 
-        flagUrl={currentCountry?.flagUrl}
-        questionNumber={questionNumber}
-        totalQuestions={TOTAL_QUESTIONS}
-      />
-
-      <AnswerOptions
-        options={currentCountry?.options || []}
-        onSelectAnswer={handleAnswerSelect}
-        disabled={answersDisabled}
-      />
-
-      <FeedbackMessage
-        show={showFeedback}
-        isCorrect={isCorrect}
-        correctAnswer={correctAnswer}
-      />
+      {gameMode === "flag" && <FlagToCountry {...sharedProps} />}
+      {gameMode === "countryToFlag" && <CountryToFlag {...sharedProps} />}
     </div>
-  )
+  );
 }

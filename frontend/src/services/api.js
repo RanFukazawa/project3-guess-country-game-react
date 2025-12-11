@@ -15,6 +15,21 @@ export async function getRandomCountry() {
   }
 }
 
+export async function getRandomCountryWithFlags() {
+  try {
+    const res = await fetch(`${API_BASE}/quiz/random-with-flags`);
+
+    if (!res.ok) {
+      throw new Error("Failed to get random country with flags");
+    }
+
+    return await res.json();
+  } catch (err) {
+    console.error("Error fetching random country with flags:", err);
+    throw err;
+  }
+}
+
 export async function checkAnswer(countryId, userAnswer) {
   try {
     const res = await fetch(`${API_BASE}/quiz/check-answer`, {

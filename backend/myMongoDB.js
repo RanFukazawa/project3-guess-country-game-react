@@ -3,8 +3,6 @@ import { MongoClient, ObjectId } from "mongodb";
 const uri = process.env.MONGODB_URI;
 const dbName = "guessCountryGame";
 
-// Working on userTest_3
-
 let client;
 let db;
 
@@ -30,7 +28,7 @@ export default function MyMongoDB() {
 
   me.getAllCountries = async ({
     query = {},
-    collection = "adminCountries_userTest_3", // Default to admin-created data
+    collection = "adminCountries", // Default to admin-created data
   }) => {
     const { db } = await connect();
     const countriesCollection = db.collection(collection);
@@ -42,14 +40,14 @@ export default function MyMongoDB() {
 
   me.getAdminCountryById = async (countryId) => {
     const { db } = await connect();
-    const countries = db.collection("adminCountries_userTest_3");
+    const countries = db.collection("adminCountries");
     const mongoID = ObjectId.createFromHexString(countryId);
     return await countries.findOne({ _id: mongoID });
   };
 
   me.addCountry = async (formData) => {
     const { db } = await connect();
-    const countries = db.collection("adminCountries_userTest_3");
+    const countries = db.collection("adminCountries");
 
     // Required fields
     const document = {
@@ -81,7 +79,7 @@ export default function MyMongoDB() {
 
   me.updateCountry = async (countryId, updateData) => {
     const { db } = await connect();
-    const countries = db.collection("adminCountries_userTest_3");
+    const countries = db.collection("adminCountries");
 
     const allowedUpdates = {};
 
@@ -122,7 +120,7 @@ export default function MyMongoDB() {
 
   me.deleteCountry = async (countryId) => {
     const { db } = await connect();
-    const countries = db.collection("adminCountries_userTest_3");
+    const countries = db.collection("adminCountries");
 
     const mongoID = ObjectId.createFromHexString(countryId);
     return await countries.deleteOne({ _id: mongoID });
@@ -131,7 +129,7 @@ export default function MyMongoDB() {
   // Functions for guessing country name game
   me.getRandomCountry = async () => {
     const { db } = await connect();
-    const collection = db.collection("adminCountries_userTest_3");
+    const collection = db.collection("adminCountries");
 
     // Get 4 random countries
     const countries = await collection
@@ -165,6 +163,43 @@ export default function MyMongoDB() {
     };
   };
 
+  me.getRandomCountryWithFlags = async () => {
+    const { db } = await connect();
+    const collection = db.collection("adminCountries");
+
+    const countries = await collection
+      .aggregate([{ $sample: { size: 4 } }])
+      .toArray();
+
+    if (countries.length < 4) {
+      throw new Error(
+        "Not enough countries in database. Need at least 4 countries.",
+      );
+    }
+
+    const correctCountry = countries[0];
+
+    // Extract flag options with country metadata
+    const flagOptions = countries.map((country) => ({
+      _id: country._id,
+      name: country.name,
+      flagUrl: country.flagUrl,
+    }));
+
+    const shuffledFlagOptions = shuffleArray(flagOptions);
+
+    return {
+      _id: correctCountry._id,
+      name: correctCountry.name,
+      flagUrl: correctCountry.flagUrl,
+      capitals: correctCountry.capitals,
+      population: correctCountry.population,
+      region: correctCountry.region,
+      languages: correctCountry.languages,
+      flagOptions: shuffledFlagOptions,
+    };
+  };
+
   // Helper function to shuffle array
   const shuffleArray = (array) => {
     const shuffled = [...array];
@@ -178,7 +213,7 @@ export default function MyMongoDB() {
   // Check the answer
   me.checkAnswer = async (countryId, userAnswer) => {
     const { db } = await connect();
-    const countries = db.collection("adminCountries_userTest_3");
+    const countries = db.collection("adminCountries");
     const mongoID = ObjectId.createFromHexString(countryId);
 
     const country = await countries.findOne({ _id: mongoID });

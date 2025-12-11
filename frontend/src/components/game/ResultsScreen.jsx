@@ -111,10 +111,22 @@ export default function ResultsScreen({
 
                     {/* Show attempt info for correct answers */}
                     {record.isCorrect && record.attempts === 2 && (
-                      <div className="attempt-info-flag">
-                        <span className="second-attempt-badge">2nd Attempt</span>
-                        <span className="points-earned">+0.5 points</span>
-                      </div>
+                      <>
+                        <div className="flag-option-review incorrect-flag">
+                          <p className="label">1st Attempt:</p>
+                          <img
+                            src={record.firstAttemptFlagUrl}
+                            alt="First attempt flag"
+                            className="review-flag"
+                          />
+                          <p className="incorrect-text">{record.firstAttempt}</p>
+                        </div>
+                        
+                        <div className="attempt-info-flag">
+                          <span className="second-attempt-badge">2nd Attempt ✓</span>
+                          <span className="points-earned">+0.5 points</span>
+                        </div>
+                      </>
                     )}
 
                     {/* Show both flag attempts for incorrect answers */}

@@ -13,7 +13,7 @@ export default function InstructionPage() {
         icon: "🏴",
         steps: [
           "You'll see a country flag on the screen",
-          "Choose the correct country name from 4 options",
+          "Choose the correct country name from 4 options - you have 2 attempts!",
           "Answer 10 questions total",
           "Get immediate feedback on each answer",
           "See your final score at the end!"
@@ -30,7 +30,7 @@ export default function InstructionPage() {
         icon: "🌍",
         steps: [
           "You'll see a country name on the screen",
-          "Choose the correct flag from 4 options",
+          "Choose the correct flag from 4 options - you have 2 attempts!",
           "Answer 10 questions total",
           "Get immediate feedback on each answer",
           "See your final score at the end!"

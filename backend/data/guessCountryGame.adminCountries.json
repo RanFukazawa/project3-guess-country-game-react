@@ -1,0 +1,1444 @@
+[{
+  "_id": {
+    "$oid": "6916401089f4698c81270910"
+  },
+  "name": "Japan",
+  "capital": "Tokyo",
+  "population": 126010000,
+  "region": "Asia",
+  "languages": [
+    "Japanese"
+  ],
+  "countryCode": "jp",
+  "flagUrl": "https://flagcdn.com/w320/jp.png",
+  "createdAt": {
+    "$date": "2025-11-13T20:31:12.130Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-13T22:53:14.537Z"
+  },
+  "capitals": [
+    "Tokyo"
+  ]
+},
+{
+  "_id": {
+    "$oid": "69164c69a324ecaf3951ef61"
+  },
+  "name": "Canada",
+  "capital": "Otawa",
+  "population": 41290000,
+  "region": "North America",
+  "languages": [
+    "English",
+    "French"
+  ],
+  "countryCode": "ca",
+  "flagUrl": "https://flagcdn.com/w320/ca.png",
+  "createdAt": {
+    "$date": "2025-11-13T21:23:53.992Z"
+  },
+  "capitals": [
+    "Ottawa"
+  ],
+  "updatedAt": {
+    "$date": "2025-11-13T22:54:51.571Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69165402a324ecaf3951ef62"
+  },
+  "name": "United States",
+  "capital": "Washington, D.C.",
+  "population": 329345637,
+  "region": "North America",
+  "languages": [
+    "English"
+  ],
+  "countryCode": "us",
+  "flagUrl": "https://flagcdn.com/w320/us.png",
+  "createdAt": {
+    "$date": "2025-11-13T21:56:18.009Z"
+  },
+  "capitals": [
+    "Washington D.C."
+  ],
+  "updatedAt": {
+    "$date": "2025-11-13T22:41:29.216Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6916545ea324ecaf3951ef63"
+  },
+  "name": "United Kingdom",
+  "capital": "London",
+  "population": 66435600,
+  "region": "Europe",
+  "languages": [
+    "English"
+  ],
+  "countryCode": "gb",
+  "flagUrl": "https://flagcdn.com/w320/gb.png",
+  "createdAt": {
+    "$date": "2025-11-13T21:57:50.865Z"
+  },
+  "capitals": [
+    "London"
+  ],
+  "updatedAt": {
+    "$date": "2025-11-13T22:41:43.787Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6916561aa324ecaf3951ef64"
+  },
+  "name": "France",
+  "capital": "Paris",
+  "population": 67064000,
+  "region": "Europe",
+  "languages": [
+    "French"
+  ],
+  "countryCode": "fr",
+  "flagUrl": "https://flagcdn.com/w320/fr.png",
+  "createdAt": {
+    "$date": "2025-11-13T22:05:14.281Z"
+  },
+  "capitals": [
+    "Paris"
+  ],
+  "updatedAt": {
+    "$date": "2025-11-13T22:41:54.340Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6916569ca324ecaf3951ef65"
+  },
+  "name": "Germany",
+  "capital": "Berlin",
+  "population": 83149300,
+  "region": "Europe",
+  "languages": [
+    "German"
+  ],
+  "countryCode": "de",
+  "flagUrl": "https://flagcdn.com/w320/de.png",
+  "createdAt": {
+    "$date": "2025-11-13T22:07:24.161Z"
+  },
+  "capitals": [
+    "Berlin"
+  ],
+  "updatedAt": {
+    "$date": "2025-11-13T22:42:04.485Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691656dba324ecaf3951ef66"
+  },
+  "name": "Italy",
+  "capital": "Rome",
+  "population": 60247214,
+  "region": "Europe",
+  "languages": [
+    "Italian"
+  ],
+  "countryCode": "it",
+  "flagUrl": "https://flagcdn.com/w320/it.png",
+  "createdAt": {
+    "$date": "2025-11-13T22:08:27.777Z"
+  },
+  "capitals": [
+    "Rome"
+  ],
+  "updatedAt": {
+    "$date": "2025-11-13T22:42:28.732Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69165719a324ecaf3951ef67"
+  },
+  "name": "China",
+  "capital": "Beijing",
+  "population": 1401492920,
+  "region": "Asia",
+  "languages": [
+    "Chinese"
+  ],
+  "countryCode": "cn",
+  "flagUrl": "https://flagcdn.com/w320/cn.png",
+  "createdAt": {
+    "$date": "2025-11-13T22:09:29.226Z"
+  },
+  "capitals": [
+    "Beijing"
+  ],
+  "updatedAt": {
+    "$date": "2025-11-13T22:42:42.039Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69165772a324ecaf3951ef68"
+  },
+  "name": "India",
+  "capital": "New Delhi",
+  "population": 1359072550,
+  "region": "Asia",
+  "languages": [
+    "Hindi",
+    "English"
+  ],
+  "countryCode": "in",
+  "flagUrl": "https://flagcdn.com/w320/in.png",
+  "createdAt": {
+    "$date": "2025-11-13T22:10:58.984Z"
+  },
+  "capitals": [
+    "New Delhi"
+  ],
+  "updatedAt": {
+    "$date": "2025-11-13T22:43:10.506Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691657b9a324ecaf3951ef69"
+  },
+  "name": "Australia",
+  "capital": "Melborne",
+  "population": 25627280,
+  "region": "Oceania",
+  "languages": [
+    "English"
+  ],
+  "countryCode": "au",
+  "flagUrl": "https://flagcdn.com/w320/au.png",
+  "createdAt": {
+    "$date": "2025-11-13T22:12:09.132Z"
+  },
+  "capitals": [
+    "Canberra"
+  ],
+  "updatedAt": {
+    "$date": "2025-11-13T22:43:33.849Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6916589ba324ecaf3951ef6a"
+  },
+  "name": "Brazil",
+  "capital": "Brasilia",
+  "population": 211173432,
+  "region": "South America",
+  "languages": [
+    "Portuguese"
+  ],
+  "countryCode": "br",
+  "flagUrl": "https://flagcdn.com/w320/br.png",
+  "createdAt": {
+    "$date": "2025-11-13T22:15:55.281Z"
+  },
+  "capitals": [
+    "Brasilia"
+  ],
+  "updatedAt": {
+    "$date": "2025-11-13T22:43:45.863Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691658eca324ecaf3951ef6b"
+  },
+  "name": "Mexico",
+  "capital": "Mexico City",
+  "population": 126577691,
+  "region": "North America",
+  "languages": [
+    "Spanish"
+  ],
+  "countryCode": "mx",
+  "flagUrl": "https://flagcdn.com/w320/mx.png",
+  "createdAt": {
+    "$date": "2025-11-13T22:17:16.368Z"
+  },
+  "capitals": [
+    "Mexico City"
+  ],
+  "updatedAt": {
+    "$date": "2025-11-13T22:44:00.496Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69165e5fe6318f746cc0c277"
+  },
+  "name": "South Africa",
+  "capitals": [
+    "Cape Town",
+    "Pretoria",
+    "Bloemfontein"
+  ],
+  "population": 58775022,
+  "region": "Africa",
+  "languages": [
+    "Afrikaans",
+    "English",
+    "isiNdebele",
+    "isiXhosa",
+    "isiZulu",
+    "Sepedi",
+    "Sesotho",
+    "Setswana",
+    "siSwati",
+    "Tshivenda",
+    "Xitsonga",
+    "South African Sign Language"
+  ],
+  "countryCode": "za",
+  "flagUrl": "https://flagcdn.com/w320/za.png",
+  "createdAt": {
+    "$date": "2025-11-13T22:40:31.778Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69165f93e6318f746cc0c278"
+  },
+  "name": "Egypt",
+  "capitals": [
+    "Cairo"
+  ],
+  "population": 100052939,
+  "region": "Africa",
+  "languages": [
+    "Arabic"
+  ],
+  "countryCode": "eg",
+  "flagUrl": "https://flagcdn.com/w320/eg.png",
+  "createdAt": {
+    "$date": "2025-11-13T22:45:39.456Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69165fdfe6318f746cc0c279"
+  },
+  "name": "Russia",
+  "capitals": [
+    "Moscow"
+  ],
+  "population": 146780720,
+  "region": "Europe",
+  "languages": [
+    "Russian"
+  ],
+  "countryCode": "ru",
+  "flagUrl": "https://flagcdn.com/w320/ru.png",
+  "createdAt": {
+    "$date": "2025-11-13T22:46:55.172Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6916603be6318f746cc0c27a"
+  },
+  "name": "South Korea",
+  "capitals": [
+    "Seoul"
+  ],
+  "population": 51780579,
+  "region": "Asia",
+  "languages": [
+    "Korean"
+  ],
+  "countryCode": "kr",
+  "flagUrl": "https://flagcdn.com/w320/kr.png",
+  "createdAt": {
+    "$date": "2025-11-13T22:48:27.822Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6916608ce6318f746cc0c27b"
+  },
+  "name": "Singapore",
+  "capitals": [
+    "Singapore"
+  ],
+  "population": 51780579,
+  "region": "Asia",
+  "languages": [
+    "English",
+    "Mandarin Chinese",
+    "Malay",
+    "Tamil"
+  ],
+  "countryCode": "sg",
+  "flagUrl": "https://flagcdn.com/w320/sg.png",
+  "createdAt": {
+    "$date": "2025-11-13T22:49:48.432Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691660f9e6318f746cc0c27c"
+  },
+  "name": "New Zealand",
+  "capitals": [
+    "Wellington"
+  ],
+  "population": 4961213,
+  "region": "Oceania",
+  "languages": [
+    "English",
+    "Maori",
+    "New Zealand Sign Language"
+  ],
+  "countryCode": "nz",
+  "flagUrl": "https://flagcdn.com/w320/nz.png",
+  "createdAt": {
+    "$date": "2025-11-13T22:51:37.626Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69166383e6318f746cc0c27e"
+  },
+  "name": "Colombia",
+  "capitals": [
+    "Bogota"
+  ],
+  "population": 49395678,
+  "region": "South America",
+  "languages": [
+    "Spanish"
+  ],
+  "countryCode": "co",
+  "flagUrl": "https://flagcdn.com/w320/co.png",
+  "createdAt": {
+    "$date": "2025-11-13T23:02:27.529Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6926395dbdd34bd4e178a138"
+  },
+  "name": "Papua New Guinea",
+  "capitals": [
+    "Port Moresby"
+  ],
+  "population": 8935000,
+  "region": "Oceania",
+  "languages": [
+    "English",
+    "Tok Pisin",
+    "Hiri Motu",
+    "Papua New Guinean Sign Language"
+  ],
+  "countryCode": "pg",
+  "flagUrl": "https://flagcdn.com/w320/pg.png",
+  "createdAt": {
+    "$date": "2025-11-25T23:18:53.973Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "692639c5bdd34bd4e178a139"
+  },
+  "name": "Fiji",
+  "capitals": [
+    "Suva"
+  ],
+  "population": 884887,
+  "region": "Oceania",
+  "languages": [
+    "English",
+    "Fijian",
+    "Fiji Hindi"
+  ],
+  "countryCode": "fj",
+  "flagUrl": "https://flagcdn.com/w320/fj.png",
+  "createdAt": {
+    "$date": "2025-11-25T23:20:37.627Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "692b905f0a2a2ac96eeb914d"
+  },
+  "name": "Samoa",
+  "capitals": [
+    "Apia"
+  ],
+  "population": 200874,
+  "region": "Oceania",
+  "languages": [
+    "Samoan",
+    "English"
+  ],
+  "countryCode": "ws",
+  "flagUrl": "https://flagcdn.com/w320/ws.png",
+  "createdAt": {
+    "$date": "2025-11-30T00:31:27.468Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "692b90d00a2a2ac96eeb914e"
+  },
+  "name": "Argentina",
+  "capitals": [
+    "Buenos Aires"
+  ],
+  "population": 44938712,
+  "region": "South America",
+  "languages": [
+    "Spanish"
+  ],
+  "countryCode": "ar",
+  "flagUrl": "https://flagcdn.com/w320/ar.png",
+  "createdAt": {
+    "$date": "2025-11-30T00:33:20.389Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "692b913d0a2a2ac96eeb914f"
+  },
+  "name": "Chile",
+  "capitals": [
+    "Santiago"
+  ],
+  "population": 19107216,
+  "region": "South America",
+  "languages": [
+    "Spanish"
+  ],
+  "countryCode": "cl",
+  "flagUrl": "https://flagcdn.com/w320/cl.png",
+  "createdAt": {
+    "$date": "2025-11-30T00:35:09.873Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "692b91d40a2a2ac96eeb9150"
+  },
+  "name": "Peru",
+  "capitals": [
+    "Lima"
+  ],
+  "population": 32131400,
+  "region": "South America",
+  "languages": [
+    "Spanish",
+    "Quechua",
+    "Aymara"
+  ],
+  "countryCode": "pe",
+  "flagUrl": "https://flagcdn.com/w320/pe.png",
+  "createdAt": {
+    "$date": "2025-11-30T00:37:40.254Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "692b92680a2a2ac96eeb9151"
+  },
+  "name": "Venezuela",
+  "capitals": [
+    "Caracas"
+  ],
+  "population": 32219521,
+  "region": "South America",
+  "languages": [
+    "Spanish"
+  ],
+  "countryCode": "ve",
+  "flagUrl": "https://flagcdn.com/w320/ve.png",
+  "createdAt": {
+    "$date": "2025-11-30T00:40:08.417Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "692b93380a2a2ac96eeb9152"
+  },
+  "name": "Uruguay",
+  "capitals": [
+    "Montevideo"
+  ],
+  "population": 3518552,
+  "region": "South America",
+  "languages": [
+    "Spanish",
+    "Uruguayan Sign Language"
+  ],
+  "countryCode": "uy",
+  "flagUrl": "https://flagcdn.com/w320/uy.png",
+  "createdAt": {
+    "$date": "2025-11-30T00:43:36.949Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "692b93eb0a2a2ac96eeb9153"
+  },
+  "name": "Guatemala",
+  "capitals": [
+    "Guatemala City"
+  ],
+  "population": 16604010,
+  "region": "North America",
+  "languages": [
+    "Spanish"
+  ],
+  "countryCode": "gt",
+  "flagUrl": "https://flagcdn.com/w320/gt.png",
+  "createdAt": {
+    "$date": "2025-11-30T00:46:35.433Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "692b97f10a2a2ac96eeb9154"
+  },
+  "name": "Honduras",
+  "capitals": [
+    "Tegucigalpa"
+  ],
+  "population": 9158345,
+  "region": "North America",
+  "languages": [
+    "Spanish"
+  ],
+  "countryCode": "hn",
+  "flagUrl": "https://flagcdn.com/w320/hn.png",
+  "createdAt": {
+    "$date": "2025-11-30T01:03:45.600Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "692b984f0a2a2ac96eeb9155"
+  },
+  "name": "Costa Rica",
+  "capitals": [
+    "San Jose"
+  ],
+  "population": 5058007,
+  "region": "North America",
+  "languages": [
+    "Spanish"
+  ],
+  "countryCode": "cr",
+  "flagUrl": "https://flagcdn.com/w320/cr.png",
+  "createdAt": {
+    "$date": "2025-11-30T01:05:19.955Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "692b98a80a2a2ac96eeb9156"
+  },
+  "name": "Cuba",
+  "capitals": [
+    "Havana"
+  ],
+  "population": 11209628,
+  "region": "North America",
+  "languages": [
+    "Spanish"
+  ],
+  "countryCode": "cu",
+  "flagUrl": "https://flagcdn.com/w320/cu.png",
+  "createdAt": {
+    "$date": "2025-11-30T01:06:48.840Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "692b99490a2a2ac96eeb9157"
+  },
+  "name": "Dominican Republic",
+  "capitals": [
+    "Santo Domingo"
+  ],
+  "population": 10358320,
+  "region": "North America",
+  "languages": [
+    "Spanish"
+  ],
+  "countryCode": "do",
+  "flagUrl": "https://flagcdn.com/w320/do.png",
+  "createdAt": {
+    "$date": "2025-11-30T01:09:29.080Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "692b99c40a2a2ac96eeb9158"
+  },
+  "name": "Spain",
+  "capitals": [
+    "Madrid"
+  ],
+  "population": 47100396,
+  "region": "Europe",
+  "languages": [
+    "Spanish"
+  ],
+  "countryCode": "es",
+  "flagUrl": "https://flagcdn.com/w320/es.png",
+  "createdAt": {
+    "$date": "2025-11-30T01:11:32.688Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "692b9a130a2a2ac96eeb9159"
+  },
+  "name": "Portugal",
+  "capitals": [
+    "Lisbon"
+  ],
+  "population": 10276617,
+  "region": "Europe",
+  "languages": [
+    "Portuguese"
+  ],
+  "countryCode": "pt",
+  "flagUrl": "https://flagcdn.com/w320/pt.png",
+  "createdAt": {
+    "$date": "2025-11-30T01:12:51.045Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "692b9a880a2a2ac96eeb915a"
+  },
+  "name": "Netherlands",
+  "capitals": [
+    "Amsterdam"
+  ],
+  "population": 17438081,
+  "region": "Europe",
+  "languages": [
+    "Dutch"
+  ],
+  "countryCode": "nl",
+  "flagUrl": "https://flagcdn.com/w320/nl.png",
+  "createdAt": {
+    "$date": "2025-11-30T01:14:48.561Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "692b9ae50a2a2ac96eeb915b"
+  },
+  "name": "Belgium",
+  "capitals": [
+    "Brussels"
+  ],
+  "population": 11522169,
+  "region": "Europe",
+  "languages": [
+    "French",
+    "Dutch",
+    "German"
+  ],
+  "countryCode": "be",
+  "flagUrl": "https://flagcdn.com/w320/be.png",
+  "createdAt": {
+    "$date": "2025-11-30T01:16:21.166Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "692b9de40a2a2ac96eeb915c"
+  },
+  "name": "Switzerland",
+  "capitals": [
+    "Bern"
+  ],
+  "population": 8586550,
+  "region": "Europe",
+  "languages": [
+    "German",
+    "French",
+    "Italian",
+    "Romansh"
+  ],
+  "countryCode": "ch",
+  "flagUrl": "https://flagcdn.com/w320/ch.png",
+  "createdAt": {
+    "$date": "2025-11-30T01:29:08.780Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "692ba0300a2a2ac96eeb915d"
+  },
+  "name": "Austria",
+  "capitals": [
+    "Vienna"
+  ],
+  "population": 8902600,
+  "region": "Europe",
+  "languages": [
+    "German"
+  ],
+  "countryCode": "at",
+  "flagUrl": "https://flagcdn.com/w320/at.png",
+  "createdAt": {
+    "$date": "2025-11-30T01:38:56.129Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "692ba68d0a2a2ac96eeb915e"
+  },
+  "name": "Sweden",
+  "capitals": [
+    "Stockholm"
+  ],
+  "population": 10327589,
+  "region": "Europe",
+  "languages": [
+    "Swedish"
+  ],
+  "countryCode": "se",
+  "flagUrl": "https://flagcdn.com/w320/se.png",
+  "createdAt": {
+    "$date": "2025-11-30T02:06:05.056Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "692ba6cc0a2a2ac96eeb915f"
+  },
+  "name": "Norway",
+  "capitals": [
+    "Oslo"
+  ],
+  "population": 5356789,
+  "region": "Europe",
+  "languages": [
+    "Norwegian"
+  ],
+  "countryCode": "no",
+  "flagUrl": "https://flagcdn.com/w320/no.png",
+  "createdAt": {
+    "$date": "2025-11-30T02:07:08.097Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "692ba7e90a2a2ac96eeb9160"
+  },
+  "name": "Denmark",
+  "capitals": [
+    "Copenhagen"
+  ],
+  "population": 5822760,
+  "region": "Europe",
+  "languages": [
+    "Danish"
+  ],
+  "countryCode": "dk",
+  "flagUrl": "https://flagcdn.com/w320/dk.png",
+  "createdAt": {
+    "$date": "2025-11-30T02:11:53.967Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "692ba8310a2a2ac96eeb9161"
+  },
+  "name": "Finland",
+  "capitals": [
+    "Helsinki"
+  ],
+  "population": 5527573,
+  "region": "Europe",
+  "languages": [
+    "Finnish",
+    "Swedish"
+  ],
+  "countryCode": "fi",
+  "flagUrl": "https://flagcdn.com/w320/fi.png",
+  "createdAt": {
+    "$date": "2025-11-30T02:13:05.881Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "692ba8620a2a2ac96eeb9162"
+  },
+  "name": "Poland",
+  "capitals": [
+    "Warsaw"
+  ],
+  "population": 38386000,
+  "region": "Europe",
+  "languages": [
+    "Polish"
+  ],
+  "countryCode": "pl",
+  "flagUrl": "https://flagcdn.com/w320/pl.png",
+  "createdAt": {
+    "$date": "2025-11-30T02:13:54.318Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "692ba8ec0a2a2ac96eeb9163"
+  },
+  "name": "Czech Republic",
+  "capitals": [
+    "Prague"
+  ],
+  "population": 10681161,
+  "region": "Europe",
+  "languages": [
+    "Czech"
+  ],
+  "countryCode": "cz",
+  "flagUrl": "https://flagcdn.com/w320/cz.png",
+  "createdAt": {
+    "$date": "2025-11-30T02:16:12.383Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "692ba9270a2a2ac96eeb9164"
+  },
+  "name": "Greece",
+  "capitals": [
+    "Athens"
+  ],
+  "population": 10724599,
+  "region": "Europe",
+  "languages": [
+    "Greek"
+  ],
+  "countryCode": "gr",
+  "flagUrl": "https://flagcdn.com/w320/gr.png",
+  "createdAt": {
+    "$date": "2025-11-30T02:17:11.179Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "692ba9710a2a2ac96eeb9165"
+  },
+  "name": "Ireland",
+  "capitals": [
+    "Dublin"
+  ],
+  "population": 4921500,
+  "region": "Europe",
+  "languages": [
+    "Irish",
+    "English"
+  ],
+  "countryCode": "ie",
+  "flagUrl": "https://flagcdn.com/w320/ie.png",
+  "createdAt": {
+    "$date": "2025-11-30T02:18:25.033Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "692ba9b30a2a2ac96eeb9166"
+  },
+  "name": "Hungary",
+  "capitals": [
+    "Budapest"
+  ],
+  "population": 9772756,
+  "region": "Europe",
+  "languages": [
+    "Hungarian"
+  ],
+  "countryCode": "hu",
+  "flagUrl": "https://flagcdn.com/w320/hu.png",
+  "createdAt": {
+    "$date": "2025-11-30T02:19:31.785Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "692ba9f20a2a2ac96eeb9167"
+  },
+  "name": "Ukraine",
+  "capitals": [
+    "Kyiv"
+  ],
+  "population": 41902416,
+  "region": "Europe",
+  "languages": [
+    "Ukrainian"
+  ],
+  "countryCode": "ua",
+  "flagUrl": "https://flagcdn.com/w320/ua.png",
+  "createdAt": {
+    "$date": "2025-11-30T02:20:34.292Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "692baa340a2a2ac96eeb9168"
+  },
+  "name": "Indonesia",
+  "capitals": [
+    "Jakarta"
+  ],
+  "population": 266911900,
+  "region": "Asia",
+  "languages": [
+    "Indonesian"
+  ],
+  "countryCode": "id",
+  "flagUrl": "https://flagcdn.com/w320/id.png",
+  "createdAt": {
+    "$date": "2025-11-30T02:21:40.694Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "692baa840a2a2ac96eeb9169"
+  },
+  "name": "Pakistan",
+  "capitals": [
+    "Islamabad"
+  ],
+  "population": 218741520,
+  "region": "Asia",
+  "languages": [
+    "Urdu",
+    "English"
+  ],
+  "countryCode": "pk",
+  "flagUrl": "https://flagcdn.com/w320/pk.png",
+  "createdAt": {
+    "$date": "2025-11-30T02:23:00.085Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "692baabd0a2a2ac96eeb916a"
+  },
+  "name": "Bangladesh",
+  "capitals": [
+    "Dhaka"
+  ],
+  "population": 168163758,
+  "region": "Asia",
+  "languages": [
+    "Bengali"
+  ],
+  "countryCode": "bd",
+  "flagUrl": "https://flagcdn.com/w320/bd.png",
+  "createdAt": {
+    "$date": "2025-11-30T02:23:57.596Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "692bab020a2a2ac96eeb916b"
+  },
+  "name": "Vietnam",
+  "capitals": [
+    "Hanoi"
+  ],
+  "population": 96208984,
+  "region": "Asia",
+  "languages": [
+    "Vietnamese"
+  ],
+  "countryCode": "vn",
+  "flagUrl": "https://flagcdn.com/w320/vn.png",
+  "createdAt": {
+    "$date": "2025-11-30T02:25:06.719Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "692bab670a2a2ac96eeb916c"
+  },
+  "name": "Thailand",
+  "capitals": [
+    "Bangkok"
+  ],
+  "population": 66474267,
+  "region": "Asia",
+  "languages": [
+    "Thai"
+  ],
+  "countryCode": "th",
+  "flagUrl": "https://flagcdn.com/w320/th.png",
+  "createdAt": {
+    "$date": "2025-11-30T02:26:47.589Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "692babc60a2a2ac96eeb916d"
+  },
+  "name": "Philippines",
+  "capitals": [
+    "Manila"
+  ],
+  "population": 108323792,
+  "region": "Asia",
+  "languages": [
+    "Filipino",
+    "English"
+  ],
+  "countryCode": "ph",
+  "flagUrl": "https://flagcdn.com/w320/ph.png",
+  "createdAt": {
+    "$date": "2025-11-30T02:28:22.477Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "692bac090a2a2ac96eeb916e"
+  },
+  "name": "Malaysia",
+  "capitals": [
+    "Kuala Lumpur"
+  ],
+  "population": 32700760,
+  "region": "Asia",
+  "languages": [
+    "Malay"
+  ],
+  "countryCode": "my",
+  "flagUrl": "https://flagcdn.com/w320/my.png",
+  "createdAt": {
+    "$date": "2025-11-30T02:29:29.920Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "692bac4f0a2a2ac96eeb916f"
+  },
+  "name": "Saudi Arabia",
+  "capitals": [
+    "Riyadh"
+  ],
+  "population": 34218169,
+  "region": "Asia",
+  "languages": [
+    "Arabic"
+  ],
+  "countryCode": "sa",
+  "flagUrl": "https://flagcdn.com/w320/sa.png",
+  "createdAt": {
+    "$date": "2025-11-30T02:30:39.626Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "692bacae0a2a2ac96eeb9170"
+  },
+  "name": "United Arab Emirates",
+  "capitals": [
+    "Abu Dhabi"
+  ],
+  "population": 9770529,
+  "region": "Asia",
+  "languages": [
+    "Arabic"
+  ],
+  "countryCode": "ae",
+  "flagUrl": "https://flagcdn.com/w320/ae.png",
+  "createdAt": {
+    "$date": "2025-11-30T02:32:14.162Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "692bacf00a2a2ac96eeb9171"
+  },
+  "name": "Israel",
+  "capitals": [
+    "Jerusalem"
+  ],
+  "population": 9164160,
+  "region": "Asia",
+  "languages": [
+    "Hebrew"
+  ],
+  "countryCode": "il",
+  "flagUrl": "https://flagcdn.com/w320/il.png",
+  "createdAt": {
+    "$date": "2025-11-30T02:33:20.182Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "692bad390a2a2ac96eeb9172"
+  },
+  "name": "Turkey",
+  "capitals": [
+    "Ankara"
+  ],
+  "population": 83154997,
+  "region": "Asia",
+  "languages": [
+    "Turkish"
+  ],
+  "countryCode": "tr",
+  "flagUrl": "https://flagcdn.com/w320/tr.png",
+  "createdAt": {
+    "$date": "2025-11-30T02:34:33.104Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "692bad850a2a2ac96eeb9173"
+  },
+  "name": "Iran",
+  "capitals": [
+    "Tehran"
+  ],
+  "population": 83230120,
+  "region": "Asia",
+  "languages": [
+    "Persian"
+  ],
+  "countryCode": "ir",
+  "flagUrl": "https://flagcdn.com/w320/ir.png",
+  "createdAt": {
+    "$date": "2025-11-30T02:35:49.530Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "692badc30a2a2ac96eeb9174"
+  },
+  "name": "Iraq",
+  "capitals": [
+    "Baghdad"
+  ],
+  "population": 39127895,
+  "region": "Asia",
+  "languages": [
+    "Arabic",
+    "Kurdish"
+  ],
+  "countryCode": "iq",
+  "flagUrl": "https://flagcdn.com/w320/iq.png",
+  "createdAt": {
+    "$date": "2025-11-30T02:36:51.123Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "692badfa0a2a2ac96eeb9175"
+  },
+  "name": "Qatar",
+  "capitals": [
+    "Doha"
+  ],
+  "population": 2747282,
+  "region": "Asia",
+  "languages": [
+    "Arabic"
+  ],
+  "countryCode": "qa",
+  "flagUrl": "https://flagcdn.com/w320/qa.png",
+  "createdAt": {
+    "$date": "2025-11-30T02:37:46.454Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "692bae3c0a2a2ac96eeb9176"
+  },
+  "name": "Kuwait",
+  "capitals": [
+    "Kuwait City"
+  ],
+  "population": 4420110,
+  "region": "Asia",
+  "languages": [
+    "Arabic"
+  ],
+  "countryCode": "kw",
+  "flagUrl": "https://flagcdn.com/w320/kw.png",
+  "createdAt": {
+    "$date": "2025-11-30T02:38:52.962Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "692bae870a2a2ac96eeb9177"
+  },
+  "name": "Nigeria",
+  "capitals": [
+    "Abuja"
+  ],
+  "population": 200963599,
+  "region": "Africa",
+  "languages": [
+    "English"
+  ],
+  "countryCode": "ng",
+  "flagUrl": "https://flagcdn.com/w320/ng.png",
+  "createdAt": {
+    "$date": "2025-11-30T02:40:07.042Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "692baebd0a2a2ac96eeb9178"
+  },
+  "name": "Kenya",
+  "capitals": [
+    "Nairobi"
+  ],
+  "population": 47564296,
+  "region": "Africa",
+  "languages": [
+    "Swahili",
+    "English"
+  ],
+  "countryCode": "ke",
+  "flagUrl": "https://flagcdn.com/w320/ke.png",
+  "createdAt": {
+    "$date": "2025-11-30T02:41:01.511Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "692baf0e0a2a2ac96eeb9179"
+  },
+  "name": "Ethiopia",
+  "capitals": [
+    "Addis Ababa"
+  ],
+  "population": 98665000,
+  "region": "Africa",
+  "languages": [
+    "Amharic",
+    "Tigrigna",
+    "Somali",
+    "Oromo",
+    "Afar"
+  ],
+  "countryCode": "et",
+  "flagUrl": "https://flagcdn.com/w320/et.png",
+  "createdAt": {
+    "$date": "2025-11-30T02:42:22.763Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "692baf680a2a2ac96eeb917a"
+  },
+  "name": "Morocco",
+  "capitals": [
+    "Rabat"
+  ],
+  "population": 35821024,
+  "region": "Africa",
+  "languages": [
+    "Arabic",
+    "Standard Moroccan Berber"
+  ],
+  "countryCode": "ma",
+  "flagUrl": "https://flagcdn.com/w320/ma.png",
+  "createdAt": {
+    "$date": "2025-11-30T02:43:52.793Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "692baf9f0a2a2ac96eeb917b"
+  },
+  "name": "Ghana",
+  "capitals": [
+    "Accra"
+  ],
+  "population": 30280811,
+  "region": "Africa",
+  "languages": [
+    "English"
+  ],
+  "countryCode": "gh",
+  "flagUrl": "https://flagcdn.com/w320/gh.png",
+  "createdAt": {
+    "$date": "2025-11-30T02:44:47.029Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "692baff30a2a2ac96eeb917c"
+  },
+  "name": "Algeria",
+  "capitals": [
+    "Algiers"
+  ],
+  "population": 43000000,
+  "region": "Africa",
+  "languages": [
+    "Arabic",
+    "Tamazight"
+  ],
+  "countryCode": "dz",
+  "flagUrl": "https://flagcdn.com/w320/dz.png",
+  "createdAt": {
+    "$date": "2025-11-30T02:46:11.532Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "692bb02f0a2a2ac96eeb917d"
+  },
+  "name": "Tunisia",
+  "capitals": [
+    "Tunis"
+  ],
+  "population": 11722038,
+  "region": "Africa",
+  "languages": [
+    "Arabic"
+  ],
+  "countryCode": "tn",
+  "flagUrl": "https://flagcdn.com/w320/tn.png",
+  "createdAt": {
+    "$date": "2025-11-30T02:47:11.248Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "692bb0750a2a2ac96eeb917e"
+  },
+  "name": "Tanzania",
+  "capitals": [
+    "Dodoma"
+  ],
+  "population": 55890747,
+  "region": "Africa",
+  "languages": [
+    "Swahili",
+    "English"
+  ],
+  "countryCode": "tz",
+  "flagUrl": "https://flagcdn.com/w320/tz.png",
+  "createdAt": {
+    "$date": "2025-11-30T02:48:21.981Z"
+  }
+}]

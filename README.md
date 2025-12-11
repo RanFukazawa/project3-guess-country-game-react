@@ -4,8 +4,8 @@
 Guess Country Game is an interactive educational web application that helps users learn world geography through a flag-based quiz game. Players test their knowledge by identifying countries from their flags, while administrators can manage the country database through a comprehensive CRUD interface. The application combines an engaging game experience with robust content management capabilities.
 
 ## Screenshot
-<img width="1463" height="808" alt="A thumbnail of Guess Country Game App (home screen)" src="https://raw.githubusercontent.com/RanFukazawa/project3-guess-country-game-react/main/project3_thumbnail_1.png" />
-<img width="1463" height="808" alt="A thumbnail of Guess Country Game App (game screen)" src="https://raw.githubusercontent.com/RanFukazawa/project3-guess-country-game-react/main/project3_thumbnail_2.png" />
+<img width="1463" height="808" alt="A thumbnail of Guess Country Game App (home screen)" src="https://raw.githubusercontent.com/RanFukazawa/project3-guess-country-game-react/final-project-branch/final_project_thumbnail_1.png" />
+<img width="1463" height="808" alt="A thumbnail of Guess Country Game App (game screen)" src="https://raw.githubusercontent.com/RanFukazawa/project3-guess-country-game-react/final-project-branch/final_project_thumbnail_2.png" />
 
 
 ## Tech Requirements
@@ -42,37 +42,41 @@ Guess Country Game is an interactive educational web application that helps user
    git clone https://github.com/RanFukazawa/project3-guess-country-game-react
    cd project3-guess-country-game-react
 
-2. Install backend dependencies:
+2. Switch to the final-project-branch:
+   ```bash
+   git checkout final-project-branch
+
+3. Install backend dependencies:
    ```bash
    cd backend
    npm install
 
-3. Install frontend dependencies:
+4. Install frontend dependencies:
     ```bash
     cd ../frontend
     npm install
 
-4. Set up environment variables: Create a `.env` file in the `backend` directory:
+5. Set up environment variables: Create a `.env` file in the `backend` directory:
    ```env
-   MONGODB_URI=mongodb+srv://<username>:<password>@cluster0.xxxxx.mongodb.net/guessCountryGame?retryWrites=true&w=majorityrecipeFinder
+   MONGODB_URI=mongodb+srv://<username>:<password>@countriesdata.bljv4ed.mongodb.net/guessCountryGame?retryWrites=true&w=majority
    PORT=3000
    NODE_ENV=production
 
-5. Populate the database with initial country data (15-20 countries) via the Admin Panel after starting the servers.
+6. Populate the database with initial country data (15-20 countries) via the Admin Panel after starting the servers.
 
-6. Start the backend server:
+7. Start the backend server:
     ```bash
     cd backend
     npm start
     # Backend will run on http://localhost:3000
 
-7. Start the frontend development server (in a new terminal):
+8. Start the frontend development server (in a new terminal):
     ```bash
     cd frontend
     npm run dev
     # Frontend will run on http://localhost:5173
 
-8. Open your browser and navigate to:
+9. Open your browser and navigate to:
     ```bash
     http://localhost:5173
 
@@ -100,8 +104,9 @@ Guess Country Game is an interactive educational web application that helps user
     - Go to render.com
     - Click "New+" -> "Web Service"
     - Connect to your GitHub repository
+    - Select "final-project-branch"
     - Configure project settings:
-        - **Name**: guess-country-game
+        - **Name**: final-guess-country-game-react
         - **Runtime**: Node
         - **Build Command**:
         ```bash
@@ -115,7 +120,7 @@ Guess Country Game is an interactive educational web application that helps user
 - Go to Environment tab
 - Add the following variables:
     - `NODE_ENV` = `production`
-    - `MONGODB_URI` = `mongodb+srv://<username>:<password>@cluster0.xxxxx.mongodb.net/guessCountryGame?retryWrites=true&w=majorityrecipeFinder`
+    - `MONGODB_URI` = `mongodb+srv://<username>:<password>@countriesdata.bljv4ed.mongodb.net/guessCountryGame?retryWrites=true&w=majority`
     - Click "Save Changes"
 
 5. Deploy:
@@ -124,7 +129,7 @@ Guess Country Game is an interactive educational web application that helps user
 
 6. Access your live app:
     ```bash
-    https://guess-country-game.onrender.com
+    https://final-guess-country-game-react.onrender.com/
 
 7. Populate the database:
     - Navigate to `/admin` on your deployed site
@@ -133,10 +138,10 @@ Guess Country Game is an interactive educational web application that helps user
 ## Author
 Ran Fukazawa
 
-[Visit Guess Country Game App](https://project3-guess-country-game-react.onrender.com/)
+[Visit Guess Country Game App](https://final-guess-country-game-react.onrender.com/)
 
 ## Reference
-This project was created as part of [CS5610 Project 3](https://northeastern.instructure.com/courses/225993/assignments/2901102) coursework.
+This project was created as part of [CS5610 Final Project](https://northeastern.instructure.com/courses/225993/assignments/2901096) coursework.
 
 ## Video Demonstration
 [Link to video](https://youtu.be/EJcf8JZo6T0)

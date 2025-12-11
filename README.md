@@ -1,12 +1,11 @@
 # Final Project: Guess Country Game (Extended ver.)
 
 ## Project Objective
-Guess Country Game is an interactive educational web application that helps users learn world geography through a flag-based quiz game. Players test their knowledge by identifying countries from their flags, while administrators can manage the country database through a comprehensive CRUD interface. The application combines an engaging game experience with robust content management capabilities.
+The objective of this project is to develop an enhanced full-stack educational web application that builds upon Project 3 by implementing dual game modes (Flag to Country and Country to Flag), a forgiving two-attempt system with partial scoring, and a comprehensive review page for performance analysis. The project aims to demonstrate proficiency in modern web development by creating a secure authentication system protecting an intuitive admin panel, implementing complex React state management for multi-attempt tracking, designing reusable components supporting multiple game modes, and integrating all features into a cohesive, user-friendly application that effectively balances educational value with engaging gameplay.
 
 ## Screenshot
-<img width="1463" height="808" alt="A thumbnail of Guess Country Game App (home screen)" src="https://raw.githubusercontent.com/RanFukazawa/project3-guess-country-game-react/final-project-branch/final_project_thumbnail_1.png" />
-<img width="1463" height="808" alt="A thumbnail of Guess Country Game App (game screen)" src="https://raw.githubusercontent.com/RanFukazawa/project3-guess-country-game-react/final-project-branch/final_project_thumbnail_2.png" />
-
+<img width="800" height="600" alt="A thumbnail of Guess Country Game App (home screen)" src="https://raw.githubusercontent.com/RanFukazawa/project3-guess-country-game-react/final-project-branch/final_project_thumbnail_1.png" />
+<img width="800" height="600" alt="A thumbnail of Guess Country Game App (game screen)" src="https://raw.githubusercontent.com/RanFukazawa/project3-guess-country-game-react/final-project-branch/final_project_thumbnail_2.png" />
 
 ## Tech Requirements
 ### Frontend
@@ -133,6 +132,7 @@ Guess Country Game is an interactive educational web application that helps user
 
 7. Populate the database:
     - Navigate to `/admin` on your deployed site
+    - Login to the admin page: username: `admin` password: `admin-only`
     - Add 15-20 countries through the admin panel
 
 ## Author

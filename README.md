@@ -144,28 +144,33 @@ Ran Fukazawa
 This project was created as part of [CS5610 Final Project](https://northeastern.instructure.com/courses/225993/assignments/2901096) coursework.
 
 ## Video Demonstration
-[Link to video](https://youtu.be/EJcf8JZo6T0)
+[Link to video](https://youtu.be/sO2PpWLALbo)
 
 ## Generative AI Usage
-This project used **Claude.ai Sonnet4.5** (by Anthropic) for assistance in the following areas:  
+This project used **Claude.ai Sonnet 4.5** (by Anthropic) for assistance in the following areas:
 
-1. **Backend API Development**  
+1. **Multi-Attempt Game Logic Implementation**  
    - **Prompt:**  
-     *"I'm getting 'myDB.getCountries is not a function' error. Here's my MongoDB code..."*  
-   - **Outcome:** Fixed function naming mismatches, implemented proper MongoDB connection handling, corrected module exports, and established RESTful API endpoints for CRUD operations.  
+     *"I want to implement a second chance attempt system where users get full points on first try and half points on second try. How can I track attempts and update scoring accordingly?"*  
+   - **Outcome:** Implemented attempt tracking with useState, created conditional scoring logic (1.0 for first attempt, 0.5 for second), designed delayed feedback system that re-enables options for second attempts, and structured record keeping to capture both attempts for review.
 
-2. **React State Management and Form Handling**  
+2. **Component Refactoring and State Management**  
    - **Prompt:**  
-     *"My form is submitting but country data isn't being saved to MongoDB. No errors are showing."*  
-   - **Outcome:** Implemented proper controlled components with useState, fixed form submission handlers, established proper data flow from frontend to backend, and added proper error handling and validation.  
+     *"I have this QuizGame logic that handles checking answers. I want to add another game mode (Country to Flag), but I'm not sure how to organize the code. Should I separate the files?"*  
+   - **Outcome:** Learned lifting state up pattern to share game logic across modes, refactored into parent QuizGame with mode-specific child components (FlagToCountry, CountryToFlag), implemented shared props pattern for score tracking and question progression, and created reusable ResultsScreen supporting multiple game modes.
 
-3. **Deployment Configuration**  
+3. **Backend API Enhancement**  
    - **Prompt:**  
-     *"I'm deploying to Render but getting 502 Bad Gateway. Here are my logs..."*  
-   - **Outcome:** Configured proper build commands for monorepo structure, fixed server binding to 0.0.0.0, set up environment variables correctly, and configured Express to serve React static files in production.
+     *"For CountryToFlag mode, I need flag URLs of all 4 countries, but getRandomCountry() only returns country names in options. Can I call it 4 times or should I modify the backend?"*  
+   - **Outcome:** Created new getRandomCountryWithFlags() function in MongoDB module, implemented backend route for /api/quiz/random-with-flags endpoint, ensured unique country selection using MongoDB $sample aggregation, and structured response to include flag metadata for all options.
 
-4. **Documentation**
-    - **Prompt:**  
-     *"Help me create a professional design document and README for my Guess Country Game project"*  
-    - **Outcome:** Created comprehensive design document with user stories, structured README with installation and deployment guides, and documented API endpoints and project architecture.
+4. **Complex Review System with Multiple Attempts**  
+   - **Prompt:**  
+     *"In the ResultsScreen, when user attempted incorrectly for both two attempts, the first attempt flag is showing the second attempt flag. How do I fix this?"*  
+   - **Outcome:** Identified missing firstAttemptFlagUrl state variable in CountryToFlag component, implemented proper storage of first attempt flag URL before second attempt, updated record structure to include both firstAttemptFlagUrl and selectedFlagUrl, and modified ResultsScreen to display correct flag images for each attempt.
+
+5. **Documentation**  
+   - **Prompt:**  
+     *"I need to update the project objective in README.md. Here is the one for Project 3... For the final project, I additionally implemented [features]."*  
+   - **Outcome:** Crafted comprehensive project objective highlighting enhancements over Project 3, documented dual game modes and two-attempt system, explained technical implementations and learning goals, and structured documentation to emphasize both educational value and technical proficiency.
 

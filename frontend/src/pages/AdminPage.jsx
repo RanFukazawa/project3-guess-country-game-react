@@ -177,7 +177,7 @@ export default function AdminPage() {
               onSubmit={handleSubmit} 
               editingCountry={editingCountry}
               onCancel={handleCancelEdit}
-              resetForm={resetForm} 
+              resetForm={0} 
             />
           </Modal.Body>
         </Modal>
